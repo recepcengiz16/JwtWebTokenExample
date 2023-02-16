@@ -1,0 +1,12 @@
+1) JwtSecurityTokenHandler nesnesi ile token üretiriz.
+2) handler nesnesinin write token methoduna yeni oluşturduğumuz jwtsecuritytoken nesnesini geçiyoruz.
+
+Bu nesnenin parametreleri:
+
+Issuer => İlgili token'ı oluşturan, yayınlayan
+Audience => Token'ı kullanacak olanlar
+Expires => token ın geçerlilik süresi
+notbefore => ne zamandan itibaren
+claims => ilgili userı ya da başka dataları tutabiliyoruz.
+signincredentials => İlgili tokenın imzasını tuttuğumuz kısım
+

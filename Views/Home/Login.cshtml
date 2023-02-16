@@ -1,0 +1,99 @@
+﻿@model JwtAppUser
+@{
+    Layout = null;
+}
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jwt Example Project</title>
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Login.css" />
+    <link rel="stylesheet" href="~/JwtWebTokenExample.styles.css" asp-append-version="true" />
+
+
+</head>
+<body>
+
+    <!-- Section: Design Block -->
+    <section class="text-center text-lg-start">
+
+
+        <!-- Jumbotron -->
+        <div class="container pt-5">
+            <div class="row g-0 align-items-center pt-5 justify-content-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);width: 38rem;
+            ">
+                        <div class="card-body  p-5 shadow text-center bg-white">
+
+                            <h5 class="fw-bold mb-1 text-danger">Jwt Asp.Net Core 7</h5>
+                            <h1 class="fw-bold mb-5 ">ÖRNEK PROJE</h1>
+                            <form asp-action="Login" asp-controller="Home" method="post">
+
+
+                                <!-- Username input -->
+                                <div class="form-outline mb-4">
+                                    <input type="text" asp-for="Username" placeholder="Kullanıcı Adı" class="form-control" />
+
+                                </div>
+
+                                <!-- Password input -->
+                                <div class="form-outline mb-4">
+                                    <input type="password" asp-for="Password" placeholder="Şifre" class="form-control" />
+
+                                </div>
+
+                                <!-- Submit button -->
+                                <button type="submit" class="btn btn-primary btn-block mb-4">
+                                    Giriş Yap
+                                </button>
+                                <div class="text-center p-t-12">
+                                    <br />
+                                    @if (ViewBag.Message != null)
+                                    {
+                                            <div class="form-group text-danger" id="mesaj">@ViewBag.Message</div>
+                                    }
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-5 p-5 mb-lg-0">
+                    <img src="~/images/login.png" class="w-60  img-fluid shadow-4"
+                         alt="" />
+                </div>
+            </div>
+        </div>
+        <!-- Jumbotron -->
+    </section>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    let mesaj = document.querySelector("#mesaj");
+    mesaj.addEventListener("load", setTimeout(function () {
+        mesaj.style.display = "none";
+    }, 3000));
+
+
+</script>
+
+
+
